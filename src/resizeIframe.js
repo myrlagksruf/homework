@@ -1,0 +1,1 @@
+(window.onresize = () => parent.postMessage({state:'size',id:document.querySelector('title').textContent, data: document.lastChild.offsetHeight}, '*'))();
