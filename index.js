@@ -49,11 +49,11 @@ app.get(`/*.html`, async (req, res) => {
     try{
         let path = req.path.split('/');
         path = path[path.length - 1];
-        console.log(req.headers);
+        /*console.log(req.headers);
         if(path !== 'index.html' && req.headers['sec-fetch-dest'] !== 'iframe'){
             res.render('error');
             return false;
-        }
+        }*/
         res.setHeader('Content-Type', 'text/html');
         let file = await fs.readFile(`./${decodeURI(req.path)}`, { encoding:'utf-8' });
         if(path === 'index.html') {
