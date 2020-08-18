@@ -1,4 +1,4 @@
-((_callObj, _options = {contextmenu : true, keydown : {F12:true, KeyU:true, KeyS:true, KeyI:true}})=>{
+const devToolDetect = (_callObj, _options = {contextmenu : true, keydown : {F12:true, KeyU:true, KeyS:true, KeyI:true}})=>{
     const callObj = JSON.parse(_callObj);
     const options = JSON.parse(_options);
     let { contextmenu, keydown } = options;
@@ -42,4 +42,5 @@
             requestAnimationFrame(check);
         })();
     });
-})(document.currentScript.getAttribute('callObj'), document.currentScript.getAttribute('options'))
+};
+devToolDetect(document.currentScript.getAttribute('callObj'), document.currentScript.getAttribute('options'));
