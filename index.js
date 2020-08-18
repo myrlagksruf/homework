@@ -49,7 +49,7 @@ app.get(`/*.html`, async (req, res) => {
     try{
         let path = req.path.split('/');
         path = path[path.length - 1];
-        console.log(req.headers['sec-fetch-dest']);
+        console.log(req.headers);
         if(path !== 'index.html' && req.headers['sec-fetch-dest'] !== 'iframe'){
             res.render('error');
             return false;
