@@ -81,4 +81,14 @@ app.get('/*.(png|jpg|webp|gif)', async (req, res) => {
         console.error(err);
     }
 });
+
+app.get('/*.md', async (req, res) => {
+    try{
+        let path = req.path.split('/');  
+        res.setHeader('Content-Disposition', `attachment; filename="111.md"`)   
+        res.download(`./${decodeURI(req.path)}`);
+    } catch(err){
+        console.error(err);
+    }
+});
 app.listen(80);
