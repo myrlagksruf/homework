@@ -46,31 +46,44 @@ app.get('/*.js', async (req, res) => {
     }
 });
 app.get(`/*.html`, async (req, res) => {
+    let _path = req.path.split('/');
+    let path = _path[_path.length - 1];
+    _path[_path.length - 1] = 'base.css';
+    let csspath = _path.join('/');
+    /*console.log(req.headers);
+    if(path !== 'index.html' && req.headers['sec-fetch-dest'] !== 'iframe'){
+        res.render('error');
+        return false;
+    }*/
+    res.setHeader('Content-Type', 'text/html');
+    let file = null;
     try{
-        let path = req.path.split('/');
-        path = path[path.length - 1];
-        /*console.log(req.headers);
-        if(path !== 'index.html' && req.headers['sec-fetch-dest'] !== 'iframe'){
-            res.render('error');
-            return false;
-        }*/
-        res.setHeader('Content-Type', 'text/html');
-        let file = await fs.readFile(`./${decodeURI(req.path)}`, { encoding:'utf-8' });
-        if(path === 'index.html') {
-            file = file.replace('</head>', `${resizeMain}</head>`);
-            //file = file.replace('</head>', `${devScript}${resizeMain}</head>`);
-            //console.log(file.match(/<iframe[^]+?src="([^]+?)"[^]+?<\/iframe>/));
-            //console.log(file.match(/<iframe src="(.+?).html"><\/iframe>/gi))
-            file = file.replace(/<iframe src="(.+?).html"><\/iframe>/gi, '<iframe src="$1.html" id="kim$1"></iframe>');
-        } else{
-            let title = `kim${path.split('.')[0]}`
-            if(file.match(/<title>((.|\n)*?)<\/title>/)) file = file.replace(/<title>((.|\n)*?)<\/title>/, `<title>${title}</title>${resizeIframe}`);
-            else file = file.replace('</head>', `<title>${title}</title>${resizeIframe}</head>`)
-        }
-        res.end(file);
+        file = await fs.readFile(`./${decodeURI(req.path)}`, { encoding:'utf-8' });
     } catch(err){
-        console.error(err);
+        console.error('index.html 파일 없음.', err);
     }
+   
+    if(path === 'index.html') {
+        let css = null;
+        try{
+            css = await fs.readFile(`./${decodeURI(csspath)}`, { encoding : 'utf-8'});
+        } catch(err){
+            console.error('base.css 파일 없음.', err)
+        }
+        file = file.replace('</head>', `${resizeMain}</head>`);
+        file = file.replace('</head>', `${devScript}</head>`);
+        file = file.replace('</head>', `<style>${css}</style></head>`);
+        //file = file.replace('</head>', `${devScript}${resizeMain}</head>`);
+        //console.log(file.match(/<iframe[^]+?src="([^]+?)"[^]+?<\/iframe>/));
+        //console.log(file.match(/<iframe src="(.+?).html"><\/iframe>/gi))
+        file = file.replace(/<iframe src="(.+?).html"><\/iframe>/gi, '<iframe src="$1.html" id="kim$1"></iframe>');
+    } else{
+        let title = `kim${path.split('.')[0]}`
+        if(file.match(/<title>((.|\n)*?)<\/title>/)) file = file.replace(/<title>((.|\n)*?)<\/title>/, `<title>${title}</title>${resizeIframe}`);
+        else file = file.replace('</head>', `<title>${title}</title>${resizeIframe}</head>`)
+    }
+    res.end(file);
+    
 });
 app.get('/*.(png|jpg|webp|gif)', async (req, res) => {
     try{

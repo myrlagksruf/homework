@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body{
+            height: 300px;
+        }
+
+        ul{
+            display: inline-block;
+        }
+
+        ol{
+            height: 0;
+            overflow: hidden;
+        }
+
+        ul > li{
+            font-size: 2em;
+        }
+        
+        li li{
+            font-size: 0.5em;
+        }
+        li:hover ol{
+            display: block;
+            height: 65px;
+        }
+    </style>
+</head>
+<body>
+    <h1>장 목록</h1>
+    <ul>
+        <li>음식
+            <ol>
+                <li>닭</li>
+                <li>파</li>
+                <li>대추</li>
+            </ol>
+        </li>
+        <li>옷
+            <ol>
+                <li>팬티</li>
+                <li>셔츠</li>
+                <li>바지</li>
+            </ol>
+        </li>
+        <li>놀 것
+            <ol>
+                <li>축구공</li>
+                <li>PlayStation</li>
+                <li>배드민턴 라켓</li>
+            </ol>
+        </li>
+    </ul>
+</body>
+</html>

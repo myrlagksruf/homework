@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .ccc{
+            list-style-type: none;
+        }
+        .ccc li{
+            display: block;
+            background-color: antiquewhite;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+        #k{
+            transform-origin: left top;
+            display: none;
+        }
+        #k:hover{
+            display: block;
+        }
+        #k:hover .c:hover{
+            background-color: black;
+            color: white;
+        }
+        .p:hover{
+            background-color: red;
+            color: white;
+        }
+        .p:hover~#k{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <ul class="ccc">
+        <li class="p">오늘의 메뉴</li>
+        <div id="k">
+            <li class="c">피자</li>
+            <li class="c">치킨</li>
+            <li class="c">햄버거</li>
+        </div>
+    </ul>
+    <ul>
+        <li>평범한 배경화면 : antiquewhite</li>
+        <li>마우스 올렸을 때 메인배경 : red</li>
+        <li>마우스 올렸을 때 메뉴배경 : black</li>
+        <li>마우스 올렸을 때 글자색 : white</li>
+    </ul>
+</body>
+</html>

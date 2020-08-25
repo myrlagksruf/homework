@@ -1,0 +1,82 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>30번 문제</title>
+    <style>
+        table {
+            width: 610px;
+        }
+        
+        .train {
+            background-color: #fbdbf2;
+            color: #f1477b;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        #table_title {
+            height: 30px;
+            background-color: #eeeeee;
+            font-weight: bold;
+        }
+
+        #col1,
+        #col4 {
+            width: 90px;
+        }
+
+        #col2,
+        #col3 {
+            width: 60px;
+        }
+
+        #col5,
+        #col6 {
+            width: 80px;
+        }
+        
+        .res{
+            background-color: #FF7800;
+            color: white;
+        }
+        
+        .full{
+            background-color: #85C135;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>열차표 예매</h2>
+    <table>
+        <tr id='table_title'>
+            <th>열차번호</th>
+            <th>출발</th>
+            <th>도착</th>
+            <th>출발시간</th>
+            <th>특실</th>
+            <th>일반실</th>
+            <th>소요시간</th>
+        </tr>
+        <tr>
+            <td id='col1' class='train'>199</td>
+            <td id='col2'>수원</td>
+            <td id='col3'>대전</td>
+            <td id='col4'>10:00</td>
+            <td id='col5'><span class="res">예약하기</span></td>
+            <td id='col6'><span class="full">매진</span></td>
+            <td id='col7'>01:44</td>
+        </tr>
+        <tr>
+            <td class='train'>230</td>
+            <td>수원</td>
+            <td>대전</td>
+            <td>11:30</td>
+            <td><span class="res">예약하기</span></td>
+            <td><span class="full">매진</span></td>
+            <td>01:38</td>
+        </tr>
+    </table>
+</body>
+</html>

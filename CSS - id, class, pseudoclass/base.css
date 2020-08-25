@@ -1,0 +1,82 @@
+[data-id=apple]{
+    background-image: url("http://controlbook.kro.kr/CSS%20-%20background,%20overflow,%20size/pikachu.png");
+    width: 200px;
+    height: 200px;
+}
+[data-class~=fruit]{
+    background-color: red;
+    color: white;
+}
+[data-class~=apple]{
+    background-color: red;
+}
+[data-class~=banana]{
+    background-color: yellow;
+}
+[data-class~=melon]{
+    background-color: green;
+}
+[data-class~=blue]{
+    color: blue;
+}
+[data-class~=purple]{
+    color: purple;
+}
+[data-class~=A] [data-class~=B]{
+    color: brown;
+}
+[data-class~=A] > [data-class~=C]{
+    font-style: italic;
+}
+[data-class~=B] + [data-class~=C]{
+    background-color: red;
+}
+[data-class~=B] ~ [data-class~=C]{
+    color: blue;
+}
+[data-class~=pikaLink]{
+    text-decoration: none;
+    color: black;
+}
+[data-class~=pikaLink]:link{
+    color: red;
+}
+[data-class~=pikaLink]:visited{
+    color: gray;
+}
+[data-class~=pikaLink]:hover{
+    background-color: blue;
+}
+[data-class~=pikaLink]:active{
+    background-color: green;
+    text-decoration: overline underline;
+    font-weight: 900;
+}
+[data-class~=block-item]{
+    display: block;
+}
+[data-class~=inline-item]{
+    display: inline;
+}
+[data-class~=inline-block-item]{
+    display: inline-block;
+}
+[data-class~=none-item]{
+    display: none;
+}
+[data-class~=item200]{
+    width: 200px;
+    height: 200px;
+}
+[data-class~=backred]{
+    background-color:rgba(255, 0, 0, 0.4)
+}
+[data-class~=dropdown]{
+    display: none;
+}
+[data-class~=dropdown]:hover{
+    background-color: rgba(255, 0, 0, 0.4);
+}
+[data-class~=dropmain]:hover [data-class~=dropdown]{
+    display: block;
+}

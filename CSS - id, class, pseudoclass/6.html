@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        #x{
+            text-decoration: none;
+            color:black;
+            font-size:3em;
+        }
+        #x:hover{
+            color:red;
+        }
+        #x:active{
+            color:white;
+            background-color: red;
+        }
+        #x:active #c+#b, #x:hover #a, #x:active #a, #x #b, #x:active #b, #x #c, #x:hover #c{
+            display: none;
+        }
+        #x #a, #x:hover #b, #x:active #c{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <a id="x" href="https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Selectors" target="_blank">
+        <div id="a">링크로!!!</div>
+        <div id="c">갈 준비 중...</div>
+        <div id="b">가실래요???</div>
+    </a>
+</body>
+</html>
