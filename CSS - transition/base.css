@@ -1,0 +1,93 @@
+[data-class~=sel]{
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	transition: all 1s ease;
+	/*애니메이션으로 (처리될 속성, 시간, 움직이는 모양)*/
+}
+[data-class~=sel]:hover{
+	background-color: red;
+}
+[data-class~="div-all"]{
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+}
+[data-class~="ease"]{
+	transition: all 2s ease;
+}
+[data-class~="ease-in"]{
+	transition: all 2s ease-in;
+}
+[data-class~="ease-out"]{
+	transition: all 2s ease-out;
+}
+[data-class~="ease-in-out"]{
+	transition: all 2s ease-in-out;
+}
+[data-class~="linear"]{
+	transition: all 2s linear;
+}
+[data-class~="div-all3"]:hover{
+	width: 500px;
+}
+[data-class~="translate"]{
+	transform: translate(100px, 50px); /*x축의 이동과 y축의 이동*/
+}
+[data-class~="scale"]{
+	transform: scale(2, 1); /* x축의 비율과 y축의 비율*/
+}
+[data-class~="rotate"]{
+	transform: rotate(45deg); /*각도 말고도 1turn 같이 회전 수를 써도 된다.*/
+}
+[data-class~="translateAndRotate"]{
+	transform: translate(100px, 100px) rotate(45deg);
+}
+[data-class~="rotateAndTranslate"]{
+	transform: rotate(45deg) translate(100px, 100px);
+}
+[data-class~="div-all2"]{
+	width:100px;
+	height:100px;
+	background-color:red;
+	transition:all 1s;
+}
+[data-class~="leftTop"]{
+	transform-origin: left top;
+ }
+[data-class~="rightBottom"]{
+	transform-origin: right bottom;
+ }
+[data-class~="right"]{
+	transform-origin: right;/*center가 생략*/
+}
+[data-class~="rotate2"]:hover{
+	transform: rotate(90deg);
+}
+[data-class~="img-all"]{
+	transition:all 1s linear;
+}
+[data-class~="blur"]{
+	filter:blur(10px);
+}
+[data-class~="blur"]:hover{
+	filter:blur(0);
+}
+[data-class~="gray"]{
+	filter:grayscale(1);
+}
+[data-class~="gray"]:hover{
+	filter:grayscale(0);
+}
+[data-class~="hue"]:hover{
+	filter:hue-rotate(180deg);
+}
+[data-class~="sepia"]:hover{
+	filter:sepia(1)
+}
+[data-class~="invert"]:hover{
+	filter:invert(1)
+}
+[data-class~="shadow"]:hover{
+	filter:drop-shadow(5px 5px 5px black);
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        #body{
+            height: 300px;
+        }        
+        #x{
+            width:150px;
+            transition: all 1s;
+        }
+        #x:hover{
+            filter: invert(100%);
+        }
+        #x:active{
+            filter: invert(100%) blur(500px);
+        }
+        #x~#y, #x:hover~#z{
+            display: block;
+        }
+        #x~#z, #x~#s, #x:hover~#y, #x:hover~#s, #x:active~#y, #x:active~#z{
+            display: none;
+        }
+        #x:active~#s{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="body">
+        <div>
+            <img id="x" src="http://controlbook.kro.kr/CSS%20-%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif">
+            <h1 id="y">
+                마우스를 올리시면 피카츄가 흑화해요.
+            </h1>
+            <h1 id="z">
+                피카츄가 흑화하였다!!!<br>
+                퇴치하려면 마우스 클릭을 해보자!!!
+            </h1>
+            <h1 id="s">
+                퇴치성공!!!
+            </h1>
+        </div>
+    </div>
+</body>
+</html>

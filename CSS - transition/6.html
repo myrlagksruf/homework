@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{
+            line-height: 0;
+        }
+        img{
+            transition:all 1s ease;
+            width:60px;
+            height:60px;
+        }
+        #x2{
+            transform: translateY(-60px);
+        }
+        #x3{
+            transform: translateY(-120px);
+        }
+        #x4{
+            transform: translateY(-180px);
+        }
+        div:hover #x2{
+            transform: translate(60px, -60px);
+        }
+        div:hover #x3{
+            transform: translate(120px, -120px);
+        }
+        div:hover #x4{
+            transform: translate(180px, -180px);
+        }
+    </style>
+</head>
+<body>
+    <h1>분신술</h1>
+    <h3>너비 60, 높이 60</h3>
+    <div>
+        <img id="x1" src="http://controlbook.kro.kr/CSS%20-%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif"><br>
+        <img id="x2" src="http://controlbook.kro.kr/CSS%20-%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif"><br>
+        <img id="x3" src="http://controlbook.kro.kr/CSS%20-%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif"><br>
+        <img id="x4" src="http://controlbook.kro.kr/CSS%20-%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif">
+    </div>
+</body>
+</html>
