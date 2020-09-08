@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body{
+            height: 400px;
+        }
+
+        svg{
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 0.5s;
+        }
+
+        #x{
+            position: absolute;
+            left: 150px;
+            top: 260px;
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            border-radius: 0;
+            transform: translate(-50%, -50%);
+            transition: all 0.5s;
+        }
+
+        #x:hover{
+            border-radius: 50%;
+        }
+
+        #x:active{
+            width: 212px;
+            height: 212px;
+            border-radius: 0;
+        }
+
+        #x:active svg{
+            left: -44px;
+            top: -44px;
+        }
+    </style>
+</head>
+<body>
+    <h2>마우스를 위에 올려보거나 눌러보시오.</h2>
+    <h2>(단, 검은색 원은 그리지 않아도 된다.)</h2>
+    <div id="x">
+        <svg width="303" height="303">
+            <circle cx="150" cy="150" r="150" stroke="black" stroke-width="3" fill="transparent"></circle>
+        </svg>
+    </div>
+</body>
+</html>

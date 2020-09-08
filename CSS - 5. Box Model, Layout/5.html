@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body{
+            height: 500px;
+        }
+        div{
+            position: absolute;
+            transform:translateY(80px);
+        }
+
+        #xx{
+            width: 400px;
+            height: 400px;
+            background-color: black;
+            left: 0;
+            top: 0;
+            z-index: 0;
+            transition: all 0.5s;
+        }
+
+        .x{
+            width: 200px;
+            height: 200px;
+            z-index: 100;
+        }
+
+        #x1{
+            left: 0;
+            top: 0;
+        }
+
+        #x2{
+            left: 200px;
+            top: 0;
+        }
+
+        #x3{
+            left: 200px;
+            top: 200px;
+        }
+
+        #x4{
+            left: 0;
+            top: 200px;
+        }
+
+        #x1:hover ~ #xx{
+            border-radius: 100% 0 0 0;
+            background-color: red;
+        }
+
+        #x2:hover ~ #xx{
+            border-radius: 0 100% 0 0;
+            background-color: orange;
+        }
+
+        #x3:hover ~ #xx{
+            border-radius: 0 0 100% 0;
+            background-color: yellow;
+        }
+
+        #x4:hover ~ #xx{
+            border-radius: 0 0 0 100%;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>마우스를 올려보세요.</h1>
+    <div id="x1" class="x"></div>
+    <div id="x2" class="x"></div>
+    <div id="x3" class="x"></div>
+    <div id="x4" class="x"></div>
+    <div id="xx"></div>
+</body>
+</html>

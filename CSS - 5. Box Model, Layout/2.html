@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        html, body{
+            margin: 0;
+        }
+        table{
+            width:500px;
+            height:500px;
+            border: 5px dotted black;
+            border-collapse: collapse;
+        }
+        
+        td{
+            width: 25%;
+            height: 25%;
+        }
+        
+        .le{
+            border-left:dashed 10px black;
+        }
+        
+        .ri{
+            border-right:dashed 10px black;
+        }
+        
+        .to{
+            border-top:dashed 10px black;
+        }
+        
+        .bo{
+            border-bottom:dashed 10px black;
+        }
+        
+        .r{
+            background-color: red;
+        }
+        
+        .b{
+            background-color: blue;
+        }
+        
+        .g{
+            background-color: green;
+        }
+        
+        .y{
+            background-color: yellow;
+        }
+    </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td class="r"></td>
+                <td class="g bo"></td>
+                <td class="b bo"></td>
+                <td class="r"></td>
+            </tr>
+            <tr>
+                <td class="b ri"></td>
+                <td class="y le to"></td>
+                <td class="y to ri"></td>
+                <td class="g le"></td>
+            </tr>
+            <tr>
+                <td class="g ri"></td>
+                <td class="y le bo"></td>
+                <td class="y bo ri"></td>
+                <td class="b le"></td>
+            </tr>
+            <tr>
+                <td class="r"></td>
+                <td class="b to"></td>
+                <td class="g to"></td>
+                <td class="r"></td>
+            </tr>
+        </table>
+    </body>
+</html>

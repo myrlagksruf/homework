@@ -1,0 +1,99 @@
+[data-id="temp1"]{
+	border: 1px solid black;
+}
+[data-id="temp2"]{
+	border: 5px solid black;
+}
+[data-id="temp3"]{
+	border: 1px dotted red;
+}
+[data-id="temp4"]{
+	border: 1px dashed blue;
+}
+[data-class~="div1"]{
+	width:100px;
+	height:100px;
+	margin-bottom: 10px;
+}
+[data-id~="solid"]{
+	border: 5px solid gold;
+}
+[data-id~="double"]{
+	border: 5px double gold;
+}
+[data-id~="dotted"]{
+	border: 5px dotted gold;
+}
+[data-id~="dashed"]{
+	border: 5px dashed gold;
+}
+[data-id~="groove"]{
+	border: 5px groove gold;
+}
+[data-id~="ridge"]{
+	border: 5px ridge gold;
+}
+[data-id~="inset"]{
+	border: 5px inset gold;
+}
+[data-id~="outset"]{
+	border: 5px outset gold;
+}
+[data-id="fourWayBorder"]{
+	border-left: 5px solid red;
+	border-right: 5px dotted blue;
+	border-top: 5px dashed green;
+	border-bottom: 5ypx double black;
+	width: 100px;
+	height: 100px;
+}
+[data-class~="div2"]{
+	width:100px;
+	height:100px;
+	background-color: red;
+}
+[data-id~="temp6"]{
+	border-radius: 50px;
+}
+[data-id~="temp7"]{
+	border-top-left-radius: 100px;
+}
+[data-class~="div3"]{
+	width: 120px;
+	border: 1px solid black;
+}
+[data-id~="temp8"]{
+	padding: 10px;
+}
+[data-id~="temp9"]{
+	padding: 20px;
+}
+[data-id~="temp10"]{
+	padding-top: 20px;
+}
+[data-id~="temp11"]{
+	padding-left: 20px;
+}
+[data-id~="temp12"]{
+	padding-bottom: 20px;
+}
+[data-id~="div1"]{
+	border: 1px solid black;
+	width: 100px;
+	height: 100px;
+	background-color: red;
+}
+[data-id~="div2"]{
+	border: 1px solid black;
+	width: 50px;
+	height: 50px;
+	background-color: blue;
+}
+[data-class~="temp13"]{
+	border: 1px solid black;
+	margin: 10px;
+}
+[data-class~="temp14"]{
+	border: 1px solid black;
+	margin: 30px;
+}
