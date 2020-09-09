@@ -259,13 +259,13 @@ filter 속성은 오브젝트의 색을 조작할 수 있는 속성이다.<br>
     </style>
 </head>
 <body>
-    <img src="http://controlbook.kro.kr/CSS%20-%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif">
-    <img id="blur" src="http://controlbook.kro.kr/CSS%20-%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif">
-    <img id="gray" src="http://controlbook.kro.kr/CSS%20-%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif">
-    <img id="hue" src="http://controlbook.kro.kr/CSS%20-%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif">
-    <img id="sepia" src="http://controlbook.kro.kr/CSS%20-%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif">
-    <img id="invert" src="http://controlbook.kro.kr/CSS%20-%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif">
-    <img id="shadow" src="http://controlbook.kro.kr/CSS%20-%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif">
+    <img src="http://controlbook.kro.kr/CSS%20-%203.%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif">
+    <img id="blur" src="http://controlbook.kro.kr/CSS%20-%203.%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif">
+    <img id="gray" src="http://controlbook.kro.kr/CSS%20-%203.%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif">
+    <img id="hue" src="http://controlbook.kro.kr/CSS%20-%203.%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif">
+    <img id="sepia" src="http://controlbook.kro.kr/CSS%20-%203.%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif">
+    <img id="invert" src="http://controlbook.kro.kr/CSS%20-%203.%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif">
+    <img id="shadow" src="http://controlbook.kro.kr/CSS%20-%203.%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif">
 </body>
 ```
 
@@ -275,7 +275,7 @@ filter 속성은 오브젝트의 색을 조작할 수 있는 속성이다.<br>
 
 <br>
 
-<img data-class="img-all" src="http://controlbook.kro.kr/CSS%20-%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif"><img data-class="blur img-all" src="http://controlbook.kro.kr/CSS%20-%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif"><img data-class="gray img-all" src="http://controlbook.kro.kr/CSS%20-%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif"><img data-class="hue img-all" src="http://controlbook.kro.kr/CSS%20-%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif"><img data-class="sepia img-all" src="http://controlbook.kro.kr/CSS%20-%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif"><img data-class="invert img-all" src="http://controlbook.kro.kr/CSS%20-%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif"><img data-class="shadow img-all" src="http://controlbook.kro.kr/CSS%20-%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif">
+<img data-class="img-all" src="http://controlbook.kro.kr/CSS%20-%203.%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif"><img data-class="blur img-all" src="http://controlbook.kro.kr/CSS%20-%203.%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif"><img data-class="gray img-all" src="http://controlbook.kro.kr/CSS%20-%203.%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif"><img data-class="hue img-all" src="http://controlbook.kro.kr/CSS%20-%203.%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif"><img data-class="sepia img-all" src="http://controlbook.kro.kr/CSS%20-%203.%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif"><img data-class="invert img-all" src="http://controlbook.kro.kr/CSS%20-%203.%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif"><img data-class="shadow img-all" src="http://controlbook.kro.kr/CSS%20-%203.%20id,%20class,%20pseudoclass/%ED%94%BC%EC%B9%B4%EC%B8%84.gif">
 
 <br>
 

@@ -26,7 +26,7 @@ div{/*Selector : div 태그에 중괄호 안에있는 속성들을 적용한다�
 ```html
 <style>
     #apple{
-        background-image: url("http://controlbook.kro.kr/CSS%20-%20background,%20overflow,%20size/pikachu.png");
+        background-image: url("http://controlbook.kro.kr/CSS%20-%202.%20background,%20overflow,%20size/pikachu.png");
         width: 200px;
         height: 200px;
     }
@@ -97,7 +97,7 @@ div에 id="apple" 이라는 속성을 추가시켰고, Style 태그에는 #이�
 ```html
 <style>
     #apple{
-        background-image: url("http://controlbook.kro.kr/CSS%20-%20background,%20overflow,%20size/pikachu.png");
+        background-image: url("http://controlbook.kro.kr/CSS%20-%202.%20background,%20overflow,%20size/pikachu.png");
         width: 200px;
         height: 200px;
     }
