@@ -1,0 +1,118 @@
+[data-class~="div1"]{
+	border:3px solid red;
+}
+[data-id="left-1"]{
+	text-align: left;
+}
+[data-id="right-1"]{
+	text-align: right;
+}
+[data-id="center-1"]{
+	text-align: center;
+}
+
+[data-id="top-1"]{
+    vertical-align: top;
+    position: 
+}
+[data-id="bottom-1"]{
+	vertical-align: bottom;
+}
+[data-id="middle-1"]{
+	vertical-align: middle;
+}
+[data-id="baseline-1"]{
+	vertical-align: baseline;
+}
+[data-class~="left"]{
+    float: left;
+}
+[data-class~="right"]{
+    float: right;
+}
+[data-class~="bord"]{
+    width: 400px;
+    height: 400px;
+    border: 1px solid blue;
+    clear: both;
+    background-color: gainsboro;
+}
+[data-class~="span1"]{
+    border: 1px solid red;
+    display: inline-block;
+}
+[data-class~="cen"]{
+    text-align: center;
+}
+[data-class~="img1"]{
+    max-width:100px;
+    vertical-align: middle;
+}
+[data-class~="bord"]{
+    width: 400px;
+    height: 400px;
+    border: 1px solid blue;
+    clear: both;
+    overflow: auto;
+    background-color: gainsboro;
+}
+[data-class~="cen"]{
+    text-align: center;
+}
+[data-class~="bor"]{
+    border: 1px solid red;
+}
+[data-class~="span2"]{
+    cursor: pointer;
+    position:sticky;
+    border: 1px solid red;
+}
+[data-id="fix"]{
+    top:0;
+}
+[data-id="sta"]{
+    top:25px;
+}
+[data-id="rel"]{
+    top:50px;
+}
+[data-id="sti"]{
+    top:75px;
+}
+[data-id="fix"]:hover ~ [data-id="pica"]{
+    position: fixed;
+    left: 40px;
+    top: 40px;
+}
+[data-id="sta"]:hover ~ [data-id="pica"]{
+    position: static;
+}
+[data-id="rel"]:hover ~ [data-id="pica"]{
+    position: relative;
+    left: 40px;
+    top: 40px;
+}
+[data-id="sti"]:hover ~ [data-id="pica"]{
+    position: sticky;
+    left: 40px;
+    top: 40px;
+}
+[data-class~="table1"]{
+    border: 3px solid gold;
+    border-collapse: collapse;
+}
+[data-class~="th1"]{
+    color: white;
+    background-color: gold;
+}
+[data-class~="th1"], [data-class~="td1"]{
+    border: 1px solid #ddd;
+    text-align: center;
+    min-width: 150px;
+    max-width: 250px;
+    font-size: 14px;
+    padding:5px;
+}
+[data-class~="td1"]{
+    height: 80px;
+}

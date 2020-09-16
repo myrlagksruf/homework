@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body{
+            height: 600px;
+        }
+        div{
+            position:absolute;
+            display: inline-block;
+        }
+        .p{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%, -50%);
+            transition:all 1s ease;
+        }
+        img:hover ~ #x1{
+            left:0;
+            top:0;
+            transform:translate(0);
+        }
+        img:hover ~ #x2{
+            right:0;
+            top:0;
+            transform:translate(0);
+        }
+        img:hover ~ #x3{
+            left:0;
+            bottom:0;
+            transform:translate(0);
+        }
+        img:hover ~ #x4{
+            right:0;
+            bottom:0;
+            transform:translate(0);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="피카츄.png" width="500">
+        <div class="p" id="x1">
+            <span>
+                <img src="피카츄.gif"><img src="피카츄.gif"><img src="피카츄.gif"><br>
+                <img src="피카츄.gif"><img src="피카츄.gif"><img src="피카츄.gif"><br>
+                <img src="피카츄.gif"><img src="피카츄.gif"><img src="피카츄.gif">
+            </span>
+        </div>
+        <div class="p" id="x2">
+            <span>
+                <img src="피카츄.gif"><img src="피카츄.gif"><img src="피카츄.gif"><br>
+                <img src="피카츄.gif"><img src="피카츄.gif"><img src="피카츄.gif"><br>
+                <img src="피카츄.gif"><img src="피카츄.gif"><img src="피카츄.gif">
+            </span>
+        </div>
+        <div class="p" id="x3">
+            <span>
+                <img src="피카츄.gif"><img src="피카츄.gif"><img src="피카츄.gif"><br>
+                <img src="피카츄.gif"><img src="피카츄.gif"><img src="피카츄.gif"><br>
+                <img src="피카츄.gif"><img src="피카츄.gif"><img src="피카츄.gif">
+            </span>
+        </div>
+        <div class="p" id="x4">
+            <span>
+                <img src="피카츄.gif"><img src="피카츄.gif"><img src="피카츄.gif"><br>
+                <img src="피카츄.gif"><img src="피카츄.gif"><img src="피카츄.gif"><br>
+                <img src="피카츄.gif"><img src="피카츄.gif"><img src="피카츄.gif">
+            </span>
+        </div>
+    </div>
+</body>
+</html>

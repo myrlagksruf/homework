@@ -61,6 +61,8 @@ app.get(`/*.html`, async (req, res) => {
         file = await fs.readFile(`./${decodeURI(req.path)}`, { encoding:'utf-8' });
     } catch(err){
         console.error('index.html 파일 없음.', err);
+        res.end(null);
+        return false;
     }
    
     if(path === 'index.html') {
@@ -71,27 +73,30 @@ app.get(`/*.html`, async (req, res) => {
             console.error('base.css 파일 없음.', err)
         }
         file = file.replace('</head>', `${resizeMain}</head>`);
-        file = file.replace('</head>', `${devScript}</head>`);
+        // file = file.replace('</head>', `${devScript}</head>`);
         file = file.replace('</head>', `<style>${css}</style></head>`);
         //file = file.replace('</head>', `${devScript}${resizeMain}</head>`);
         //console.log(file.match(/<iframe[^]+?src="([^]+?)"[^]+?<\/iframe>/));
         //console.log(file.match(/<iframe src="(.+?).html"><\/iframe>/gi))
         file = file.replace(/<iframe src="(.+?).html"><\/iframe>/gi, '<iframe src="$1.html" id="kim$1"></iframe>');
     } else{
-        let title = `kim${path.split('.')[0]}`
+        
+        let title = `kim${path.split('.')[0]}`;
         if(file.match(/<title>((.|\n)*?)<\/title>/)) file = file.replace(/<title>((.|\n)*?)<\/title>/, `<title>${title}</title>${resizeIframe}`);
         else file = file.replace('</head>', `<title>${title}</title>${resizeIframe}</head>`)
     }
     res.end(file);
     
 });
-app.get('/*.(png|jpg|webp|gif)', async (req, res) => {
+app.get('/*.(png|jpg|webp|gif|svg)', async (req, res) => {
     try{
         console.log(decodeURI(req.path));
+        if(req.path.match(/\.svg$/)) res.setHeader('Content-Type', 'image/svg+xml');
         let file = await fs.readFile(`./${decodeURI(req.path)}`);        
         res.end(file);
     } catch(err){
         console.error(err);
+        res.end(null);
     }
 });
 
