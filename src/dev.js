@@ -8,7 +8,12 @@ const devToolDetect = (_callObj, _options = {contextmenu : true, keydown : {F12:
     if(keydown.KeyU === undefined) keydown.KeyU = true;
     if(keydown.KeyS === undefined) keydown.KeyS = true;
     if(keydown.KeyI === undefined) keydown.KeyI = true;
-    if(contextmenu) window.addEventListener('contextmenu', (e) => e.preventDefault())
+    if(contextmenu) window.addEventListener('contextmenu', e => {
+        const allow = ['IMG', 'AUDIO', 'VIDEO'];
+        if(allow.every(v => v !== e.target.nodeName)){
+            e.preventDefault();
+        }
+    });
     if(Object.values(keydown).some(v => v)){
         const keyOption = [];
         if(keydown.F12) keyOption.push(`e.code==='F12'`);
