@@ -1,0 +1,201 @@
+html, body{
+    margin: 0;
+}
+
+#sidenav{
+    width: 225px;
+    background-color: black;
+    position: fixed;
+    top: 0; left: 0;
+    bottom: 0;
+    color: white;
+}
+#botnav{
+    position: fixed;
+    right: 0px; bottom: 0px;
+    left: 0px;
+    z-index: 10400;
+    height: 81px;
+    background-color: rgba(25, 25, 25, 0.97);
+    color: white;
+    padding: 18px;
+    box-sizing: border-box;
+}
+.rounded{
+    border-radius: 100px;
+}
+.logo{
+    background-image: linear-gradient(transparent,transparent), 
+        url("./img/logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    width: 118px; height: 26px;
+    margin: 26px 10px 26px 20px;
+    display: block;
+    content: "";
+}
+
+.profile-area{
+    padding: 0 1rem 0 1rem;
+    margin: 1rem 0;
+}
+.profile-area img, .profile-area span{
+    vertical-align: middle;
+
+}
+.profile-area span{
+    margin: 0 .5rem;
+}
+
+ul{
+    list-style: none;
+    padding: 0; margin: 0;
+}
+
+ul.menu li{
+    padding: 9px 9px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+ul.menu li:hover{
+    opacity: 1;
+}
+
+.list-title{
+    font-size: 0.9em;
+    color: #555;
+    margin: 2rem 0 0 0;
+}
+
+#botnav img{
+    float: left;
+}
+#botnav .info{
+    float: left;
+    margin-left: 1rem;
+}
+#botnav .info .song_title{
+    line-height: 1.6;
+}
+#botnav .info .singer{
+    color: #747474;
+    font-size: .9em;
+}
+
+#botnav .controller{
+    position: absolute;
+    left: 250px; right: 250px;
+    top: 15px;
+    text-align: center;
+}
+#botnav .controller span{
+    width: 50px;
+    height: 56px;
+    display: inline-block;
+}
+#botnav .controller span::before{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    margin-top: 10px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.btn_shuffle::before{
+    background-image: url("./img/shuffle.svg");
+}
+.btn_prev::before{
+    background-image: url("./img/prev.svg");
+}
+.btn_next::before{
+    background-image: url("./img/next.svg");
+}
+.btn_play::before{
+    background-image: url("./img/play.svg");
+}
+.btn_loop::before{
+    background-image: url("./img/loop.svg");
+}
+
+main{
+    margin-left: 225px;
+    margin-bottom: 81px;
+}
+.jumbotron{
+    padding: 80px 0;
+    background-color: black;
+    color: white;
+}
+.jumbotron p{
+    color: #939393;
+    font-size: 14px;
+
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.col-5{
+    float: left;
+    width: 41.6%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.col-7{
+    float: left;
+    width: 58.3%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.col-6{
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.section .container{
+    padding: 20px 10px 40px 10px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.section-title{
+    display: inline-block;
+    padding-bottom: 2px;
+    font-size: 17px;
+    line-height: 38px;
+    font-weight: 700;
+    color: #232323;
+    vertical-align: top;
+}
+.date{
+    font-size: .9em;
+    color: #939393;
+}
+.list-container{
+    overflow-x: auto;
+}
+ul.list{
+    white-space: nowrap;
+}
+ul.list li{
+    display: inline-block;
+    width: 300px;
+    white-space: normal;
+}
+ul.list li.mixtape{
+    width: 200px;
+}
+ul.list li:not(:first-child){
+    margin-left: 10px;
+}

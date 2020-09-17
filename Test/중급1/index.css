@@ -1,0 +1,148 @@
+html, body{
+    margin: 0;
+}
+
+#header{
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background-color: white;
+    padding: 1rem 1.5rem;
+}
+
+main{
+    padding-bottom: 4rem;
+}
+
+.section{
+    margin: auto;
+    max-width: 1040px;
+    padding: 0 2rem;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col-6{
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+.col-4{
+    float: left;
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+#first-section{
+    padding-bottom: 4rem;
+}
+
+#title{
+    padding: 4rem 0;    
+}
+
+.text-center{
+    text-align: center;
+}
+
+.sub-title{
+    font-size: 24px;
+    padding-right: 3em;
+    letter-spacing: 0px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#desc{
+    font-size: 34px;
+    line-height: 44px;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.5em;
+}
+
+#main-btn{
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#main-btn span{
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+#main-btn:hover span{
+    transform: translateX(10px);
+}
+
+.section:not(#first-section){
+    border-top: 1px solid #dadada;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+p{
+    font-size: 34px;
+    line-height: 44px;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.5em;
+}
+p.small{
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.btns .btn{
+    border-radius: 10rem;
+    padding: 10px 20px;
+    border: 1px solid #dadada;
+    font-weight: bold;
+    margin-right: 1rem;
+    background-color: white;
+    font-size: 16px;
+    min-width: 144px;
+    cursor: pointer;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+.btns .btn:hover{
+    background-color: black;
+    color: white;
+}
+.img-wine-background{
+    background-color: black;
+}
+.img-wine{
+    filter: grayscale(1) invert(1);
+    max-width: 250px;
+    display: block;
+    margin: auto;
+}
+
+footer{
+    background-color: rgba(33, 32, 32, .83);
+    color: white;
+    padding: 1rem;
+}
+footer p{
+    margin-top: 4rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+footer img{
+    filter: invert(1);
+}
+.float-right{
+    float: right;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+li{
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 1rem;
+}

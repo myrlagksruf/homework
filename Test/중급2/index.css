@@ -1,0 +1,113 @@
+html, body{
+    margin: 0;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.news-area{
+    float: left;
+    width: 70%;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+.side-area{
+    float: left;
+    width: 30%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.section-title{
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.news{
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 16px;
+}
+.news-img{
+    float: right;
+    border-radius: 10px;
+}
+.news-title{
+    font-size: 1.125rem;
+}
+.news-sub{
+    font-size: 0.75rem;
+    opacity: .7;
+}
+
+.weather{
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 15px;
+}
+.weather-title{
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #dadce0;
+}
+.weather-body{
+    padding: 10px 0;
+}
+.weather-body .today img{
+    float: right;
+}   
+
+.weather-body ul{
+    margin: 0; padding: 0;
+    list-style: none;
+}
+
+.col-2{
+    float: left;
+    width: 20%;
+    box-sizing: border-box;
+    padding: 0 4px;
+    text-align: center;
+}
+.high-temp{
+    font-weight: 500;
+    font-size: .9em;
+}
+.low-temp{
+    font-size: .8em;
+}
+.today-title{
+    padding: 10px 0 4px 10px;
+    font-size: 0.9rem;
+}
+.today-temp{
+    padding: 0 0 0 10px;
+    font-size: 1.4rem;
+}
+
+.rank{
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    padding: 16px;
+    margin-top: 16px;
+}
+.rank-title{
+    padding-bottom: 16px;
+    border-bottom: 1px solid #dadce0;
+}
+.rank-list{
+    margin: 0; padding: 0;
+    list-style: none;
+    margin-top: 8px;
+}
+.rank-list li{
+    float: left;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: white;
+    border: 1px solid #dadce0;
+    color: rgb(95, 99, 104);
+    font-size: 13px;
+    margin: 0 8px 8px 0;
+}

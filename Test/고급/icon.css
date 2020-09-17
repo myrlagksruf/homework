@@ -1,0 +1,38 @@
+.link_icon::before{
+    background-image: linear-gradient(transparent,transparent),url("./img/sp_vibe.4b4eb67f.png");
+    background-size: 740px 735px;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+    content: "";
+}
+
+.link_today::before{
+    background-position: -508px -689px;
+    width: 20px;
+    height: 20px;
+}
+
+.link_chart::before{
+    background-position: -32px -689px;
+    width: 20px;
+    height: 20px;
+}
+
+.link_dj::before{
+    background-position: -256px -689px;
+    width: 20px;
+    height: 20px;
+}
+
+.link_mag::before{
+    background-position: -688px -474px;
+    width: 20px;
+    height: 20px;
+}
+
+.link_monthly::before{
+    background-position: -4px -689px;
+    width: 20px;
+    height: 20px;
+}

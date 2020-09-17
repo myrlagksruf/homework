@@ -17,22 +17,10 @@ const _options = {
 const devScript = `<script src="dev.js" callObj=${JSON.stringify(_callObj)} options=${JSON.stringify(_callObj)}></script>`;
 const resizeMain = `<script src="resizeMain.js"></script>`;
 const resizeIframe = `<style>*{box-sizing:border-box;}body,html{margin:0;overflow:hidden;}</style><script src="resizeIframe.js"></script>`;
+const baseCss = `<link rel="stylesheet" href="./base.css"></head>`;
 app.set('view engine', 'ejs');
 app.get('/', async (req, res) =>{
-    try{
-        let dir = await fs.opendir('./');
-        let dirObj = {
-            dir: []
-        }
-        for await (const dirent of dir){
-            if(notDir.some(v => v === dirent.name) || !dirent.isDirectory()) continue;
-            dirObj.dir.push(dirent.name);
-        }
-        res.render('index', dirObj);
-    } catch(err){
-        console.error(err);
-    }
-    
+    await indexPage(req, res);
 });
 app.get('/*.js', async (req, res) => {
     try{
@@ -46,52 +34,30 @@ app.get('/*.js', async (req, res) => {
     }
 });
 app.get(`/*.html`, async (req, res) => {
-    let _path = req.path.split('/');
-    let path = _path[_path.length - 1];
-    _path[_path.length - 1] = 'base.css';
-    let csspath = _path.join('/');
-    /*console.log(req.headers);
-    if(path !== 'index.html' && req.headers['sec-fetch-dest'] !== 'iframe'){
-        res.render('error');
-        return false;
-    }*/
     res.setHeader('Content-Type', 'text/html');
     let file = null;
     try{
         file = await fs.readFile(`./${decodeURI(req.path)}`, { encoding:'utf-8' });
     } catch(err){
-        console.error('index.html 파일 없음.', err);
-        res.end(null);
+        console.log('index.html 파일 없음.');
+        await indexPage(req, res, '/index.html', '');
         return false;
     }
-   
-    if(path === 'index.html') {
-        let css = null;
-        try{
-            css = await fs.readFile(`./${decodeURI(csspath)}`, { encoding : 'utf-8'});
-        } catch(err){
-            console.error('base.css 파일 없음.', err)
-        }
+    if(req.path.match(/index\.html$/)) {
         file = file.replace('</head>', `${resizeMain}</head>`);
-        file = file.replace('</head>', `${devScript}</head>`);
-        file = file.replace('</head>', `<style>${css}</style></head>`);
-        //file = file.replace('</head>', `${devScript}${resizeMain}</head>`);
-        //console.log(file.match(/<iframe[^]+?src="([^]+?)"[^]+?<\/iframe>/));
-        //console.log(file.match(/<iframe src="(.+?).html"><\/iframe>/gi))
-        file = file.replace(/<iframe src="(.+?).html"><\/iframe>/gi, '<iframe src="$1.html" id="kim$1"></iframe>');
+        file = file.replace('</head>', `${devScript}</he    ad>`);
+        file = file.replace('</head>', baseCss);
     } else{
-        
-        let title = `kim${path.split('.')[0]}`;
-        if(file.match(/<title>((.|\n)*?)<\/title>/)) file = file.replace(/<title>((.|\n)*?)<\/title>/, `<title>${title}</title>${resizeIframe}`);
-        else file = file.replace('</head>', `<title>${title}</title>${resizeIframe}</head>`)
+        file = file.replace('</head>', `${resizeIframe}</head>`)
     }
     res.end(file);
     
 });
-app.get('/*.(png|jpg|webp|gif|svg)', async (req, res) => {
+app.get('/*.(png|jpg|webp|gif|svg|css)', async (req, res) => {
     try{
         console.log(decodeURI(req.path));
         if(req.path.match(/\.svg$/)) res.setHeader('Content-Type', 'image/svg+xml');
+        else if(req.path.match(/\.css$/)) res.setHeader('Content-Type', 'text/css');
         let file = await fs.readFile(`./${decodeURI(req.path)}`);        
         res.end(file);
     } catch(err){
@@ -108,4 +74,23 @@ app.get('/*.md', async (req, res) => {
         console.error(err);
     }
 });
+
+async function indexPage(req, res, ori, las){
+    let path = req.path.replace(ori, las);
+    try{
+        console.log(path);
+        let dir = await fs.opendir(`.${decodeURI(path)}`);
+        let dirObj = {
+            dir: []
+        }
+        for await (const dirent of dir){
+            if(notDir.some(v => v === dirent.name) || !dirent.isDirectory()) continue;
+            dirObj.dir.push(dirent.name);
+        }
+        res.render('index', dirObj);
+    } catch(err){
+        console.error(err);
+    }
+}
+
 app.listen(80);
