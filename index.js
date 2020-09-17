@@ -45,7 +45,7 @@ app.get(`/*.html`, async (req, res) => {
     }
     if(req.path.match(/index\.html$/)) {
         file = file.replace('</head>', `${resizeMain}</head>`);
-        file = file.replace('</head>', `${devScript}</he    ad>`);
+        file = file.replace('</head>', `${devScript}</head>`);
         file = file.replace('</head>', baseCss);
     } else{
         file = file.replace('</head>', `${resizeIframe}</head>`)
