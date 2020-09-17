@@ -73,7 +73,7 @@ app.get(`/*.html`, async (req, res) => {
             console.error('base.css 파일 없음.', err)
         }
         file = file.replace('</head>', `${resizeMain}</head>`);
-        // file = file.replace('</head>', `${devScript}</head>`);
+        file = file.replace('</head>', `${devScript}</head>`);
         file = file.replace('</head>', `<style>${css}</style></head>`);
         //file = file.replace('</head>', `${devScript}${resizeMain}</head>`);
         //console.log(file.match(/<iframe[^]+?src="([^]+?)"[^]+?<\/iframe>/));
