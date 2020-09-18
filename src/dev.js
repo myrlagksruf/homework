@@ -1,6 +1,7 @@
 const devToolDetect = (_callObj, _options = {contextmenu : true, keydown : {F12:true, KeyU:true, KeyS:true, KeyI:true}})=>{
     const callObj = JSON.parse(_callObj);
     const options = JSON.parse(_options);
+    console.log(options);
     let { contextmenu, keydown } = options;
     if(contextmenu === undefined) contextmenu = true;
     if(keydown === undefined) keydown = {F12:true, KeyU:true, KeyS:true, KeyI:true}

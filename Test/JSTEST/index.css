@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+aside {
+    position: fixed;
+    width: 15%;
+    right: 0;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.move {
+    transform: translateX(0);
+}
+
+.rm-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    font-size: xx-large;
+}
+
+.bi {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.sel {
+    filter: invert(100%);
+}
+
+.list-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-container li {
+    list-style: none;
+    width: 25%;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    padding: 0.5em;
+}
+
+.list-container li:hover {
+    box-shadow: 0 0 5px 0 gray;
+}
+
+li.glow {
+    border: 3px solid green;
+}
+
+#cart-img {
+    position: relative;
+}
+
+#num {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    background-color: red;
+    color: white;
+    font-size: large;
+    text-align: center;
+    padding: 0 7px;
+    border-radius: 50%;
+    z-index: 1;
+    display: none;
+}
+
+#shopping-cart-container {
+    margin-top: 100px;
+}

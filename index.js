@@ -1,23 +1,29 @@
 const express = require('express');
 const app = express();
 const fs = require('fs/promises');
-const notDir = ['.git', 'node_modules', 'src', 'views'];
-const _callObj = {
-    first:"location.href='about:blank';"
-}
-const _options = {
-    contextmenu:false,
-    keydown : {
-        F12 : true,
-        KeyU : true,
-        KeyS : true,
-        KeyI : true
-    }
-}
-const devScript = `<script src="dev.js" callObj=${JSON.stringify(_callObj)} options=${JSON.stringify(_callObj)}></script>`;
-const resizeMain = `<script src="resizeMain.js"></script>`;
-const resizeIframe = `<style>*{box-sizing:border-box;}body,html{margin:0;overflow:hidden;}</style><script src="resizeIframe.js"></script>`;
+let notDir = null;
+let _callObj = null;
+let _options = null;
+let devScript = '';
+(async()=>{
+    obj = JSON.parse(await fs.readFile('./system.json', { encoding:'utf-8' }));
+    notDir = obj.notDir;
+    _callObj = obj._callObj;
+    _options = obj._options;
+    devScript = `<script src="dev.js?src=1" callObj=${JSON.stringify(_callObj)} options=${JSON.stringify(_options)}></script>`;
+})();
+const resizeMain = `<script src="resizeMain.js?src=1"></script>`;
+const resizeIframe = `<style>*{box-sizing:border-box;}body,html{margin:0;overflow:hidden;}</style><script src="resizeIframe.js?src=1"></script>`;
 const baseCss = `<link rel="stylesheet" href="./base.css"></head>`;
+const skeleton = `{
+    window.addEventListener('keydown',async e=>{
+        if(e.ctrlKey&&e.code==='KeyS'){
+            let a = document.createElement('a');
+            a.href = './skeleton.zip';
+            a.click();
+        }
+    });
+}`;
 app.set('view engine', 'ejs');
 app.get('/', async (req, res) =>{
     await indexPage(req, res);
@@ -27,7 +33,12 @@ app.get('/*.js', async (req, res) => {
         res.setHeader('Content-Type', 'application/javascript');
         let path = req.path.split('/');
         path = path[path.length - 1];
-        let file = await fs.readFile(`./src/${decodeURI(path)}`);        
+        let file = null;
+        if(req.query.src === '1') file = await fs.readFile(`./src/${decodeURI(path)}`);
+        else {
+            file = await fs.readFile(`.${decodeURI(req.path)}`, {encoding : 'utf-8'});
+            file = [file, skeleton].join('\n');
+        }
         res.end(file);
     } catch(err){
         console.error(err);
@@ -66,10 +77,10 @@ app.get('/*.(png|jpg|webp|gif|svg|css)', async (req, res) => {
     }
 });
 
-app.get('/*.md', async (req, res) => {
+app.get('/*.(md|zip)', async (req, res) => {
     try{
         let path = req.path.split('/');
-        res.download(`./${decodeURI(req.path)}`, decodeURI(path[1]));
+        res.download(`./${decodeURI(path.join('/'))}`, decodeURI(path[path.length - 1]));
     } catch(err){
         console.error(err);
     }
