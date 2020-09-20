@@ -37,7 +37,7 @@ app.get('/*.js', async (req, res) => {
         if(req.query.src === '1') file = await fs.readFile(`./src/${decodeURI(path)}`);
         else {
             file = await fs.readFile(`.${decodeURI(req.path)}`, {encoding : 'utf-8'});
-            file = [file, skeleton].join('\n');
+            if(req.query.skeleton === '1') file = [file, skeleton].join('\n');
         }
         res.end(file);
     } catch(err){
