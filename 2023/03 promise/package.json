@@ -1,0 +1,21 @@
+{
+  "name": "08-02.temp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "signup": "node src/signup.js",
+    "memo": "node src/memo.js",
+    "login": "node src/login.js",
+    "signup:test": "node dist/signup.js",
+    "memo:test": "node dist/memo.js",
+    "login:test": "node dist/login.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.15.11"
+  }
+}
